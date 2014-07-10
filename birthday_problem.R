@@ -33,8 +33,6 @@ birthday_problem <- function(n = 23,                      # size of the group
                               MARGIN=1, 
                               FUN=function(x)  sum( table(x) >= min_people_sharing ))
 
-  hist(matching_birthdays, probability=TRUE)
-  
   # plot relative histogram of birthday distribution
   hist(matching_birthdays,
      main = 'Histogram of Shared Birthdays',
@@ -48,6 +46,7 @@ birthday_problem <- function(n = 23,                      # size of the group
   return( mean(matching_birthdays >= min_shared_birthdays) )
 
 }
+
 
 # standard birthday problem (probability of at least one shared birthday in
 # a group of 23) estimated with 10,000 draws
